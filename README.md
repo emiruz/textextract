@@ -6,7 +6,7 @@ It's a tree search and score algorithm, it uses a very simple scoring rule, it i
 
 ## What it's for
 
-If you're doing semantic analysis on crawled information and you need article content to feed into some other process like a semantic extractor, classifier, etc. Note however that whilst it preserves the rendering order of text it doesn't preserve white space.
+If you're doing semantic analysis on crawled information and you need article content to feed into some other process like a semantic extractor, classifier, etc. It preserves the rendering order of text but it doesn't preserve white space.
 
 ## How it works
 
