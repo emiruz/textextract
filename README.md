@@ -28,7 +28,7 @@ If you're doing semantic analysis on crawled information and you need article co
 
     main func() {
     	textextract.MinScore = 5 // the default is 5.
-        extractedText, err := textextract.ExtractFromHtml(yourUT8HTMLString)
+        extractedText, err := textextract.ExtractFromHtml(yourUTF8HTMLString)
     }
 
 ## License
