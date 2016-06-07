@@ -70,7 +70,7 @@ func filter(doc *html.Node, minScore int) *html.Node {
 	return doc
 }
 
-func ExtractFromText(htmlUTF8Str string) (string,error) {
+func ExtractFromHtml(htmlUTF8Str string) (string,error) {
 	doc, err := html.Parse(strings.NewReader(htmlUTF8Str))
 	if err != nil {
 		return "", errors.New("Could not parse HTML string.")
