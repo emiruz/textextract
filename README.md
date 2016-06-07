@@ -27,7 +27,8 @@ If you're doing semantic analysis on crawled information and you need article co
     import "github.com/emiruz/textextract"
 
     main func() {
-        extractedText, err := textextract.Extract(yourUT8HTMLString)
+    	 textextract.MinScore = 5 // the default is 5.
+        extractedText, err := textextract.ExtractFromText(yourUT8HTMLString)
     }
 
 ## License
