@@ -12,7 +12,7 @@ If you're doing semantic analysis on crawled information and you need article co
 
 1. It parses the HTML into a node tree using the standard Go html package.
 
-2. It then walks the tree depth first and scores each node on route. The score from the parent node is pushed down as the basis for the child node. The scoring formula is essentially: WORDCOUNT - WORDCOUNTINANCHOR^2, where WORDCOUNT is the number of words in the node that are not hyperlinked and WORDCOUNTINANCHOR are the number of words in the node that are hyperlinked. The WORDCOUNTINANCHOR for each node is actually calculated as 1 + WORDCOUNTINACHOR^2 just because there is often anchors on things other than words so WORDCOUNTINACHOR^2 is often zero.
+2. It then walks the tree depth first and scores each node on route. The score from the parent node is pushed down as the basis for the child node. The scoring formula is: WORDCOUNT - WORDCOUNTINANCHOR^2, where WORDCOUNT is the number of words in the node that are not hyperlinked and WORDCOUNTINANCHOR is the number of words in the node that are hyperlinked. The WORDCOUNTINANCHOR for each node is actually calculated as 1 + WORDCOUNTINACHOR^2 just because there is often anchors on things other than words so WORDCOUNTINACHOR^2 is often zero.
 
 3. As it goes it'll add nodes that are below the minimum score to a toDelete slice. When the recursion is finished, it'll delete all nodes in the toDelete slice.
 
